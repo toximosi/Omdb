@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="contenido">
+    <div class="row">
+      <div class="col-1 col-md-3 col-lg-4">
+        <!--AVATAR INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+        <img class="img-fluid" [src]="'avatar.png' | urlImg" title="Iván Villarrubia Moreno">
+        <!--AVATAR Fin --------------------------------------------------------------------------------------------------------------------------- -->
+      </div>
+      <div class="col-12 col-md-9 col-lg-8">
+        <!--Descripcion INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+        <div class="cabecera">
+          <span><i>Candidato:</i></span>
+          <h1>Iván Villarrubia Moreno</h1>
+          <!-- <p> <i>Me puedes encontrar como toximosi o puedes llamarme Hiwan</i></p> -->
+          <h2>UI & Full Stack con unas gotas de UX</h2>
+        </div>
+        <div class="texto-proyecto">
+          <h3><b>Descripción del proyecto:</b></h3>
+          <p>El proyecto actual es una <a [href]="'Prueba_Front_Angular-V1.pdf'|urlImg" target="_blank" tittel="prueba"
+              alt="prueba"><span class=" material-icons">picture_as_pdf</span> prueba de habilidades</a>, solicitada por
+            la empresa <a href="https://www.nateevo.com/" target="_blank" title="Nateevo" alt="Nateevo">Nateevo</a>,
+            donde se pide
+            la creación de una aplicación
+            en base angular; dicha aplicación se basa en mostrar el listado y la consulta en detalle de películas y
+            series. La información se recuperará a través de la fuente gratuita <a href="http://www.omdbapi.com/"
+              target="_blank" title="OMDb API" alt="OMDb API">OMDb API</a>.</p>
+          <p>Hay que destacar que la búsqueda inicial que se muestra en la sección: <a class="nav-link"
+              [routerLink]="['../lista']">“lista”</a> con el icono de menú <a class="nav-link"
+              [routerLink]="['../lista']">“<span class="material-icons"> movie_filter </span>”</a>, de las
+            películas/series será mediante la palabra “star”.</p>
+        </div>
+        <div class="enlaces-social">
+          <h2>Conoce más sobre mi:</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a [href]="'Ivan-Villarrubia-Moreno-Curriculum-Reducido.pdf' | urlImg"
+                target="_blank" alt="Curriculum pdf resumido" title="Curriculum pdf resumido"><span
+                  class=" material-icons">picture_as_pdf </span> Curriculum resumido en pdf</a></li>
+            <li class="list-group-item"><a [href]="'Ivan-Villarrubia-Moreno-Curriculum-Ampliado.pdf' | urlImg"
+                target="_blank" alt="Curriculum pdf
+          Ampliado" title="Curriculum pdf
+          Ampliado"><span class="material-icons">picture_as_pdf </span> Curriculum ampliado en pdf</a></li>
+            <li class="list-group-item"><a href="https://www.linkedin.com/in/ivan-villarrubia/" target="_blank"
+                alt="Linkedin" title="Linkedin"><i class="fab fa-linkedin-in"></i> Perfil de Linkedin</a>
+            <li class="list-group-item"><a href="https://www.instagram.com/toximosi.designer/" target="_blank"
+                alt="instagram" title="instagram"><i class="fab fa-instagram"></i> Momento Instagram :)</a></li>
+            <li class="list-group-item"><a href="https://toximosi.es/" target="_blank" alt="Portfolio Diseñador Grafico"
+                title="Portfolio Diseñador Grafico"><span class="material-icons">child_care</span> Portfolio Como UI &
+                designer</a></li>
+            <li class="list-group-item">
+              <a href="https://github.com/toximosi" target="_blank" alt="github" title="github" target="_blanck"><i
+                  class="fab fa-github-alt"></i> Un poquito de código</a>
+            </li>
+            <li class="list-group-item"><a href="https://lostthing.toximosi.es" target="_blank"
+                alt="Proyecto fin master Full Stack" title="Proyecto fin master Full Stack"><span
+                  class="material-icons">
+                  psychology
+                </span>Proyecto del Master Full Stack Neoland</a></li>
+          </ul>
+        </div>
+        <!--Descripcion FIN --------------------------------------------------------------------------------------------------------------------------- -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+@import "src/app/component/import.scss";
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  .nav-item {
+
+    padding: 0.2rem;
+
+    i,
+    span {
+      font-size: 20px;
+    }
+  }
+
+  ;
+
+}

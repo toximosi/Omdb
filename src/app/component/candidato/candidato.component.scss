@@ -1,0 +1,54 @@
+@import "src/app/component/import.scss";
+
+
+
+.cabecera {
+  margin-bottom: $spaceBig;
+}
+
+.texto-proyecto {
+  margin-bottom: $spaceBig;
+
+  a {
+    display: inline-block;
+    padding: 0;
+
+    .material-icons {
+      padding: 0;
+      transform: translateY(7px);
+    }
+  }
+}
+
+.enlaces-social {
+
+  .list-group,
+  .list-group-item,
+  .list-group-item a {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+  }
+
+  .list-group-item {
+    a {
+      width: 100%;
+      text-decoration: none;
+    }
+
+    i,
+    span {
+      font-size: 20px;
+      margin-right: $spaceMedium;
+    }
+
+    &:hover {
+      background: $colorGRadienteLinealClaro;
+      color: $colorBlanco;
+
+      a {
+        color: $colorBlanco;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "src/app/component/import.scss";
+
+
+.content-404 {
+  position: absolute;
+  top: 0;
+  width: calc(100% - #{$anchoMenu});
+  height: 100%;
+  line-height: normal;
+  background-color: rgb(169, 0, 0);
+  background: linear-gradient(145deg, rgba(169, 0, 0, 1) 0%, rgba(41, 0, 0, 1) 100%);
+
+  .contenido {
+    width: 100%;
+    height: 100%;
+    background-image: url(src/assets/img/404-bg-niebla.png), url(src/assets/img/404-bg-estrellas.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .elementos {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      .imagen {
+        border: 0;
+        margin-bottom: 30px;
+      }
+
+      .texto {
+        font-size: 30px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+//cambios de estilo de bootstrap
+//Menus -----------------------------
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background: $colorGRadienteLinealClaro;
+}
+
+.nav-item {
+  color: $colorPrincipal;
+
+  &:hover {
+    color: $colorPrincipalHover;
+
+    a {
+      color: $colorPrincipalHover;
+    }
+  }
+}
+
+//Links -------------------------------
+
+a {
+  color: $colorPrincipal;
+
+  &:hover {
+    color: $colorPrincipalHover;
+  }
+}
+
+
+.btn-primary {
+  background-color: $colorPrincipal;
+  border-color: $colorPrincipal;
+
+  &:hover {
+    //color: #fff;
+    background-color: $colorPrincipalHover;
+    border-color: $colorPrincipalHover;
+    ;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $colorPrincipalClaro;
+  border-color: $colorPrincipalClaro;
+}

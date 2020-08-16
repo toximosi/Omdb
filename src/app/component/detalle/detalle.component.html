@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <!--Mensaje condicional INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="detalle-film">
+      <div class="aviso col-12" *ngIf="detallePelicula?.imdbID == 'tt1245696'">
+        <h1>¿Vienes de estranjis 🤔?,</h1>
+        <h2> Debe ser que no has selecionado ninguna pelicula/serie en la sección de <i><a class="nav-link"
+              [routerLink]="['../lista']">"lista"</a></i>,<br> pero no pasa nada, te recomendamos una
+          muy buena: <i>"{{detallePelicula?.Title}}"</i>.
+        </h2>
+      </div>
+    </div>
+    <!--Mensaje condicional FIN--------------------------------------------------------------------------------------------------------------------------- -->
+  </div>
+  <div class="row">
+    <!--Muestra detalle INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="poster col-12 col-md-5">
+      <div class="poster-img">
+        <img [src]="detallePelicula?.Poster " class="img-fluid" alt="{{detallePelicula?.Title}}">
+      </div>
+    </div>
+    <div class="info col-12 col-md-6">
+      <div class="detalle">
+        <h1>{{detallePelicula?.Title}}</h1>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label">Estreno: <b>{{detallePelicula?.Released}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label">Año: <b>{{detallePelicula?.Year}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label">Tipo: <b>{{detallePelicula?.Type}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label">Duración: <b>{{detallePelicula?.Runtime}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label">Genero: <b>{{detallePelicula?.Genre}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Valoración IMDB: <b>{{detallePelicula?.imdbRating}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Director: <b>{{detallePelicula?.Director}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Actores: <b>{{detallePelicula?.Actors}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Sinopsis: <b>{{detallePelicula?.Plot}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Guionista: <b>{{detallePelicula?.Writer}}</b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Clasificación:<br>
+          <b><span *ngFor="let ratings of detallePelicula?.Ratings">
+              {{ratings?.Source}}: {{ratings?.Value}}<br>
+            </span></b></p>
+      </div>
+      <div class="detalle">
+        <p class="detalle-label"> Votos: <b>{{detallePelicula?.imdbVotes}}</b></p>
+      </div>
+    </div>
+    <!--Muestra detalle FIN --------------------------------------------------------------------------------------------------------------------------- -->
+  </div>
+</div>

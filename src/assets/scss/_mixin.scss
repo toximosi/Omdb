@@ -1,0 +1,30 @@
+@mixin positionAbsolute($top: auto, $bottom: auto) {
+  position: absolute;
+  top: $top;
+  left: 0;
+  bottom: $bottom;
+}
+
+// Aplicar el estilo de flex centrar en el elemento
+@mixin flexCenter($direction: row, $positionH: center, $alignV: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $positionH;
+  //align-content: center;
+  align-items: $alignV;
+}
+
+//---------------------------------------------------------------------------
+//modificar Estilos
+//---------------------------------------------------------------------------
+@mixin BorrarLista() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+@mixin ImgAjustada() {
+  width: 100%;
+  height: auto;
+}

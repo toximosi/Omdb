@@ -1,0 +1,32 @@
+<div class="menu-contenido">
+  <div class="logo">
+    <a class="" [routerLink]="['inicio']" routerLinkActive="active">
+      <img [src]="'logo.png'| urlImg">
+    </a>
+  </div>
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['inicio']" routerLinkActive=" active"><i class=" fas fa-hand-spock"></i>
+        <br>inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['candidato']" routerLinkActive="active"><i
+          class="fas fa-user-astronaut"></i><br>candidato</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['lista']" routerLinkActive="active"><span class="material-icons">
+          movie_filter
+        </span><br>peliculas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['lista/tt1245696']" routerLinkActive="active"><i
+          class="fas fa-film"></i><br>detalle</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['404']" routerLinkActive="active"><i class="fas fa-bug"></i><br>404</a>
+    </li>
+  </ul>
+  <!--Footer INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+  <app-menu-footer></app-menu-footer>
+  <!--Footer FIN --------------------------------------------------------------------------------------------------------------------------- -->
+</div>

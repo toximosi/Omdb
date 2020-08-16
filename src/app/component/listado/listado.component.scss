@@ -1,0 +1,124 @@
+@import "src/app/component/import.scss";
+
+.banner {
+  margin: 0;
+
+  .buscador {
+    margin: $spaceBig 0;
+  }
+}
+
+.busqueda-peliculas {
+  margin: $spaceBig 0;
+}
+
+.card-pelicula {
+  margin: $spaceBig 0;
+
+  /*   h2 {} */
+
+  .valoracion {
+    @include flexCenter;
+    @include positionAbsolute(-19px);
+    left: -19px;
+    font-size: 10px;
+    width: 40px;
+    height: 40px;
+    background: url('src/assets/img/icon-star.png') no-repeat no-repeat center center;
+    background-size: 100% auto;
+    padding: 5px;
+    font-size: 14px;
+    color: #ffffff;
+    padding-top: 9px;
+    z-index: 200;
+  }
+
+  .poster {
+
+    position: relative;
+    background: url('src/assets/img/poster-error.png') no-repeat no-repeat center center;
+    background-size: 100% auto;
+
+    .poster-img {
+      position: relative;
+      overflow: hidden;
+
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .detalle {
+        @include positionAbsolute(600px);
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: $colorBlanco;
+        padding: $spaceBig;
+        z-index: 100;
+      }
+
+      &:hover {
+
+        background-size: 130% auto;
+
+
+        .detalle {
+          top: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .card-resumen {
+    @include flexCenter;
+    justify-content: space-between;
+
+    height: 40px;
+    background: $colorGRadienteLinealClaro;
+    color: $colorBlanco;
+    width: auto;
+    height: $spaceBig;
+
+    font-size: 14px;
+
+    .info {
+      padding: $spaceSmall;
+      height: 100%;
+      display: inline-block;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .icon-type {
+      background: $colorGRadienteLineal;
+    }
+
+    .ranting {
+      background: $colorFluor;
+    }
+
+
+  }
+
+  .card-body {
+    position: relative;
+    padding-bottom: $spaceMedium + 38px;
+
+    .btn-detalle {
+      @include flexCenter;
+      @include positionAbsolute(auto, 0px);
+      margin-bottom: $spaceMedium;
+      margin-left: $spaceMedium;
+    }
+  }
+}

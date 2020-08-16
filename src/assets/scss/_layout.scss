@@ -1,0 +1,45 @@
+//DISPOSICION reticula secciones, con relacion a app.component.html
+app-root {
+  height: 100%;
+}
+
+app-error404,
+app-listado,
+app-detalle,
+app-candidato {
+  width: 100%;
+}
+
+.interface {
+  height: 100%;
+  width: 100%;
+  /*  display: flex;
+ flex-direction: column; */
+  position: relative;
+  padding: $spaceBig*2 0;
+}
+
+// MENU NAVEGACION
+
+.menu-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $anchoMenu;
+  height: 100%;
+  padding: $spaceMedium;
+}
+
+.pantallas {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  padding-left: $anchoMenu;
+}
+
+.menu-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

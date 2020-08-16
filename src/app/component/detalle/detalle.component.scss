@@ -1,0 +1,59 @@
+@import "src/app/component/import.scss";
+
+.detalle-film {
+  .aviso {
+    position: relative;
+    color: $colorBlanco;
+    background: $colorPrincipal;
+    border-radius: $EsquinaRedondeadaMedia;
+    margin: $spaceBig;
+    margin-top: 0;
+    padding: $spaceBig;
+    text-align: center;
+
+    a {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      color: $colorPrincipalHover;
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      //bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 50px 0 50px;
+      border-color: $colorPrincipal transparent transparent transparent;
+    }
+  }
+}
+
+.poster {
+  .poster-img {
+    width: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.info {
+  h1 {
+    font-size: 60px;
+  }
+
+  /*  .detalle {
+   .detalle-label {}
+ } */
+
+}

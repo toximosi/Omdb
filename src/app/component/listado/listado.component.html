@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner col-12">
+      <div class="container">
+        <div class="row">
+          <!--Formulario INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+          <div class="buscador col-12">
+           <div class="form-group row">
+          <div class="col-auto col-6 col-sm-2">
+                <button type="submit" class="btn btn-primary form-control" (click)="Reiniciar()"><i
+                    class="fas fa-sync-alt"></i> Reiniciar</button>
+              </div>
+              <div class="col-auto  col-6 col-sm-2">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <select name="year" class="custom-select mr-sm-9 form-control" id="inlineFormCustomSelect"
+                  (change)="SeleccionYear($event)">
+                  <option value="0" selected>filtrar por año</option>
+                  <option [value]="ano" *ngFor="let ano of filtroYear">{{ano}}</option>
+                </select>
+              </div>
+              <div class=" col-12 col-sm-8">
+          <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="form-group row align-items-center ">
+                <div class="col-sm-8">
+                  <input class="form-control" type="text" placeholder="Nueva busqueda por título" formControlName="tituloBusqueda">
+                </div>
+                <div class="col-sm-4">
+                  <input type="submit" class="btn btn-primary form-control" value="Buscar">
+                </div>
+           </form></div>
+          </div></div>
+          <!--Formulario FIN--------------------------------------------------------------------------------------------------------------------------- -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <!--Mensaje INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="busqueda-peliculas col-12">
+      <h1>Muestra de peliculas con <b>"{{busquedaTitulo}}"</b> en el título</h1>
+    </div>
+    <!--Mensaje FIN --------------------------------------------------------------------------------------------------------------------------- -->
+  </div>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+    <!--CARDS INICIO --------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="col mb-4" *ngFor="let pelis of listaImdb">
+      <div class="card card-pelicula h-100">
+        <div class="poster">
+          <div *ngIf="pelis?.imdbRating >= 8" class="valoracion">
+            {{pelis?.imdbRating}}
+          </div>
+          <div class="poster-img" [ngStyle]="{'background-image':'url(' + pelis?.Poster + ')'}">
+            <img [src]="'poster-fantasma.png' | urlImg" class="img-fluid" alt="{{pelis?.Title}}">
+            <div class="detalle">
+              <h3><b>{{pelis?.Title}}</b></h3>
+              <b>Synopsis:</b>
+              <br> {{pelis?.Plot}}
+            </div>
+          </div>
+        </div>
+        <div class="card-resumen">
+          <div class="info icon-type"><img *ngIf="pelis?.Type == 'movie'" [src]="'icon-movie-blanco.png' | urlImg"
+              [alt]="pelis?.Type">
+            <img *ngIf="pelis?.Type =='series'" [src]="'icon-serie-blanco.png' | urlImg" [alt]="pelis?.Type"></div>
+          <div class="info"><i class="fas fa-calendar"></i> {{pelis?.Year}}</div>
+          <div class="info"><i class="fas fa-heart"></i> {{pelis?.imdbVotes}}</div>
+          <div class="info ranting"><i class="fas fa-star"></i> {{pelis?.imdbRating}} <i class="fab fa-imdb"></i></div>
+
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">{{pelis?.Title}}</h2>
+          <div class="card-text">
+            <p>Genero: {{pelis?.Genre}}<br>
+              {{pelis?.Awards}}</p>
+          </div>
+          <a [routerLink]="pelis?.imdbID" class="btn btn-primary btn-detalle"><span
+              class="material-icons">chevron_right</span> más
+            información</a>
+        </div>
+      </div>
+    </div>
+    <!--CARDS FIN --------------------------------------------------------------------------------------------------------------------------- -->
+  </div>
+</div>

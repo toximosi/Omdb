@@ -1,0 +1,21 @@
+@import "src/app/component/import.scss";
+
+.menu-contenido {
+  .logo {
+    width: 100%;
+    padding: $spaceSmall;
+
+    a {
+      width: 100%;
+
+      img {
+        /* padding: $spaceMedium; */
+        width: 100%;
+        height: auto;
+        border: 0;
+      }
+    }
+
+
+  }
+}
